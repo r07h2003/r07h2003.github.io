@@ -403,6 +403,17 @@
     .metric-num small { font-size: 0.42em; font-weight: 700; color: var(--muted); letter-spacing: 0; }
     .metric-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
     .metric .text-link { margin-top: 10px; align-self: flex-start; }
+    .metric-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 10px; }
+    .metric-links .text-link { margin: 0; }
+    .watch-link {
+      display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px;
+      border: 1px solid var(--line); border-radius: 100px; background: var(--card);
+      font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap;
+      transition: border-color 0.3s, transform 0.3s var(--ease);
+    }
+    .watch-link:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .watch-link .play { width: 24px; height: 24px; border-radius: 50%; background: var(--accent); position: relative; flex-shrink: 0; }
+    .watch-link .play::after { content: ''; position: absolute; left: 9px; top: 7px; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent #fff; }
 
     /* ── SHOWCASE (Rosco / Floof) ── */
     .showcase { padding: var(--section-y) 0; overflow: hidden; }
@@ -590,6 +601,7 @@
       .project-num { display: none; }
       .metric { grid-column: 1 / -1; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
       .metric .text-link { margin: 0 0 0 auto; align-self: center; }
+      .metric-links { margin: 0 0 0 auto; flex-direction: row; align-items: center; gap: 18px; }
       .skill-card, .skill-card.wide { grid-column: span 3; }
     }
     @media (max-width: 900px) {
@@ -633,6 +645,7 @@
       .phone { width: 240px; }
       .car-btn.prev { left: -14px; } .car-btn.next { right: -14px; }
       .metric .text-link { margin: 0; }
+      .metric-links { margin: 0; flex-wrap: wrap; }
       .contact-links a { font-size: 24px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -991,7 +1004,10 @@
           <aside class="metric">
             <div class="metric-num">+312K</div>
             <div class="metric-label">U.S. viewership lift attributed to the Drive to Survive era</div>
-            <a href="https://r07h2003.github.io/f1-drive-to-survive/" target="_blank" rel="noopener" class="text-link">View analysis →</a>
+            <div class="metric-links">
+              <a href="https://r07h2003.github.io/f1-drive-to-survive/#watch" target="_blank" rel="noopener" class="watch-link"><span class="play" aria-hidden="true"></span>Watch the 90-sec video</a>
+              <a href="https://r07h2003.github.io/f1-drive-to-survive/" target="_blank" rel="noopener" class="text-link">View analysis →</a>
+            </div>
           </aside>
         </article>
 
