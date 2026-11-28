@@ -6,10 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rohan Harishchandrakar: Analytics, AI &amp; Product</title>
   <meta name="description" content="Rohan Harishchandrakar. MS Marketing Analytics at Rutgers Business School. I turn messy, real-world data into decisions and products people use."/>
-  <meta property="og:title" content="Rohan Harishchandrakar"/>
-  <meta property="og:description" content="Analytics, AI agents and product: projects, live Tableau dashboards and case studies."/>
+  <meta property="og:title" content="Rohan Harishchandrakar · Portfolio"/>
+  <meta property="og:description" content="Performance Data Associate Co-op at SharkNinja · MS Marketing Analytics at Rutgers. Analytics, AI agents and product: projects, live dashboards and case studies."/>
   <meta property="og:type" content="website"/>
-  <meta name="theme-color" content="#f6f3ee"/>
+  <meta property="og:url" content="https://r07h2003.github.io/"/>
+  <meta property="og:image" content="https://r07h2003.github.io/assets/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="627"/>
+  <meta property="og:image:alt" content="Rohan Harishchandrakar, with his current role at SharkNinja and MS Marketing Analytics at Rutgers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="theme-color" content="#ffffff"/>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23c8533a'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ERH%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -18,15 +24,17 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --paper: #f6f3ee;
-      --paper-2: #efebe4;
-      --card: #fbfaf7;
+      --bg: #ffffff;        /* page background */
+      --paper: #f6f3ee;     /* warm cream: boxes, and text on dark areas */
+      --paper-2: #ebe5db;   /* inner panels inside boxes */
+      --card: #f6f3ee;      /* boxes */
       --ink: #141210;
       --ink-2: #2b2824;
       --muted: #6f6a63;
       --line: #e3ddd3;
       --line-strong: #d3cbbf;
-      --accent: #c8533a;
+      --accent: #f24a1e;      /* vermilion: name, big numbers, headings */
+      --accent-ink: #cf3a10;  /* deeper vermilion for small text */
       --navy: #1e3a5f;
       --rosco: #8b4513;
       --rosco-bg: #f8efe6;
@@ -47,7 +55,7 @@
 
     html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     body {
-      background: var(--paper);
+      background: var(--bg);
       color: var(--ink);
       font-family: var(--font-body);
       font-size: 16px;
@@ -82,7 +90,7 @@
       text-transform: uppercase;
       color: var(--muted);
     }
-    .label .num { color: var(--accent); margin-right: 10px; }
+    .label .num { color: var(--accent-ink); margin-right: 10px; }
     .heading {
       font-family: var(--font-display);
       font-size: clamp(52px, 8vw, 112px);
@@ -108,10 +116,10 @@
       box-decoration-break: clone;
       transition: background-size 0.9s var(--ease), color 0.5s ease;
     }
-    .no-js .hl, .is-in .hl { background-size: 100% 100%; color: #fff; }
+    .no-js .hl, .is-in .hl { background-size: 100% 100%; color: var(--ink); }
     .hl-logo { white-space: nowrap; }
     .hl-logo img { display: inline-block; max-width: none; height: 1.05em; width: auto; vertical-align: -0.2em; margin-left: 0.15em; filter: brightness(0); transition: filter 0.5s ease; }
-    .no-js .hl-logo img, .is-in .hl-logo img { filter: brightness(0) invert(1); }
+    .no-js .hl-logo img, .is-in .hl-logo img { filter: brightness(0); }
     .hero .hl { white-space: nowrap; }
     .is-in .hl:nth-of-type(2) { transition-delay: 0.15s; }
     .is-in .hl:nth-of-type(3) { transition-delay: 0.3s; }
@@ -138,7 +146,7 @@
 
     .text-link {
       font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
-      color: var(--accent); text-decoration: none;
+      color: var(--accent-ink); text-decoration: none;
       display: inline-flex; align-items: center; gap: 8px;
       background-image: linear-gradient(currentColor, currentColor);
       background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat;
@@ -206,7 +214,7 @@
       transform: translateY(16px); opacity: 0;
       transition: transform 0.5s var(--ease), opacity 0.5s;
     }
-    .mobile-menu li a.active { color: var(--accent); font-style: italic; }
+    .mobile-menu li a.active { color: var(--accent-ink); font-style: italic; }
     .mobile-menu.open li a { transform: none; opacity: 1; }
     .mobile-menu.open li:nth-child(2) a { transition-delay: 0.04s; }
     .mobile-menu.open li:nth-child(3) a { transition-delay: 0.08s; }
@@ -222,7 +230,7 @@
       padding: 130px 0 90px;
       overflow: hidden;
     }
-    .hero .container { max-width: 1480px; }
+    .hero .container { width: 100%; max-width: 1200px; }
     .hero::after { /* soft rust glow */
       content: ''; position: absolute; z-index: -1;
       width: 60vw; height: 60vw; right: -20vw; top: -15vw;
@@ -273,33 +281,33 @@
     .hero-now .sep { font-style: normal; }
 
     /* avatar stage */
-    .avatar-stage { position: relative; justify-self: center; width: min(100%, 330px, calc((100svh - 240px) * 230 / 496)); min-width: 220px; }
-    .avatar {
-      display: block; width: 100%; height: auto; overflow: visible;
-      --av-skin: #c68a63; --av-skin-shade: #a86f4c; --av-blush: #d9735a;
-      --av-hair: #1f1915; --av-hair-hi: #3d322b;
-      --av-tee: #faf8f3; --av-tee-shade: #e3ddd1;
-      --av-over: #7d8c6c; --av-over-shade: #66745a;
-      --av-jeans: #3c5070; --av-jeans-shade: #30425e; --av-jeans-cuff: #5a6f8f;
-      --av-shoe: #fbfaf7; --av-sole: #ddd6c9; --av-accent: #c8533a; --av-watch: #4a3426;
-    }
-    .av-upper { animation: breathe 3.6s ease-in-out infinite alternate; }
-    .av-head { transform-box: view-box; transform-origin: 120px 134px; animation: tilt 6s ease-in-out infinite alternate; }
-    .av-forearm { transform-box: view-box; transform-origin: 191px 150px; animation: wave 3.4s ease-in-out infinite; }
-    .av-eyes { transform-box: fill-box; transform-origin: center; animation: blink 4.6s infinite; }
-    .av-pupils { transition: transform 0.25s ease-out; }
+    /* waist-up portrait, sized to stand as tall as the intro text; the bottom fades out instead of a hard crop */
+    .avatar-stage { position: relative; justify-self: center; width: min(100%, 440px, calc((100svh - 200px) * 810 / 1380)); min-width: 240px; }
+    .avatar-float { display: block; animation: float 5s ease-in-out infinite alternate; }
+    .avatar { display: block; width: 100%; height: auto; transition: transform 0.5s var(--ease); transform-origin: 50% 100%;
+      -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 99%); mask-image: linear-gradient(to bottom, #000 80%, transparent 99%); }
+    .avatar-stage:hover .avatar { transform: translateY(-6px) rotate(-1.2deg); }
+    .av-parallax { display: flex; justify-content: center; min-width: 0; will-change: transform; }
+    /* while a card tilts, Motion drives transform directly */
+    .js .project.reveal.is-in.tilting { transition: border-color 0.3s, box-shadow 0.5s var(--ease); }
+    /* comic-style speech bubble: white, inked outline, solid offset shadow, tail pointing at the face */
     .bubble {
-      position: absolute; right: 80%; top: 6%; z-index: 3;
-      background: var(--ink); color: var(--paper);
-      padding: 13px 20px; border-radius: 22px 22px 6px 22px;
-      font-weight: 600; font-size: 16px; white-space: nowrap;
-      box-shadow: 0 18px 40px -18px rgba(20,18,16,0.6);
+      position: absolute; right: 82%; top: 11%; z-index: 3;
+      background: #fff; color: var(--ink);
+      border: 2.5px solid var(--ink); border-radius: 28px;
+      padding: 12px 22px 13px;
+      font-weight: 700; font-size: 17px; letter-spacing: -0.01em; white-space: nowrap;
+      filter: drop-shadow(4px 4px 0 var(--ink));
       animation: pop 0.7s var(--ease) 1.3s both;
       cursor: pointer;
     }
+    /* tail: only its two curved sides are inked, so its white fill covers the outline where it joins the bubble */
+    .bubble .tail { position: absolute; right: -40px; bottom: -4px; width: 46px; height: 40px; overflow: visible; transform-origin: 3px 15px; }
+    .bubble .tail path { fill: #fff; stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+    .bubble.boing { animation: boing 0.45s var(--ease); }
     @media (max-width: 900px) { .bubble { animation: fadeIn 0.6s ease 1.3s both; } }
-    .bubble span { display: inline-block; transition: opacity 0.25s, transform 0.25s var(--ease); }
-    .bubble span.swap { opacity: 0; transform: translateY(6px); }
+    .bubble span { display: inline-block; transition: opacity 0.2s, transform 0.2s var(--ease); }
+    .bubble span.swap { opacity: 0; transform: scale(0.9); }
     .scroll-cue {
       position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -361,11 +369,11 @@
     .skill-card.dark { background: var(--ink); border-color: var(--ink); color: var(--paper); }
     .skill-card.dark .chip { background: rgba(246,243,238,0.08); color: rgba(246,243,238,0.85); border-color: rgba(246,243,238,0.12); }
     .skill-top { display: flex; justify-content: space-between; align-items: center; }
-    .skill-card .label { color: var(--accent); font-size: 10px; }
+    .skill-card .label { color: var(--accent-ink); font-size: 10px; }
     .skill-idx { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
     .skill-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin: 14px 0 18px; letter-spacing: -0.01em; }
     .chips { display: flex; flex-wrap: wrap; gap: 7px; }
-    .chip { font-size: 12.5px; line-height: 1.2; padding: 7px 12px; border: 1px solid var(--line); border-radius: 100px; background: var(--paper); color: var(--ink-2); }
+    .chip { font-size: 12.5px; line-height: 1.2; padding: 7px 12px; border: 1px solid var(--line); border-radius: 100px; background: var(--bg); color: var(--ink-2); }
 
     /* ── PROJECTS ── */
     .projects-list { margin-top: 72px; display: flex; flex-direction: column; gap: 18px; }
@@ -385,7 +393,7 @@
     .project:hover::after { transform: scaleX(1); }
     .project-num { font-family: var(--font-display); font-style: italic; font-size: 44px; line-height: 1; color: var(--accent); }
     .project-meta { display: flex; flex-direction: column; gap: 14px; }
-    .project-type { font-size: 10px; color: var(--accent); }
+    .project-type { font-size: 10px; color: var(--accent-ink); }
     .project-title { font-family: var(--font-display); font-size: clamp(28px, 2.6vw, 36px); font-weight: 700; line-height: 1.05; letter-spacing: -0.015em; }
     .status { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
     .status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
@@ -506,8 +514,8 @@
     /* ── APPROACH ── */
     .approach-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(40px, 7vw, 110px); align-items: start; }
     .approach-sticky { position: sticky; top: 120px; }
-    .approach-sticky .heading em { color: var(--navy); }
-    .approach-sticky .label .num { color: var(--navy); }
+    .approach-sticky .heading em { color: var(--accent); }
+    .approach-sticky .label .num { color: var(--accent-ink); }
     .approach-sticky .lead { margin-top: 26px; max-width: 400px; }
     .approach-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
     .principles { display: flex; flex-direction: column; gap: 14px; counter-reset: p; }
@@ -518,12 +526,12 @@
       background: var(--card); border: 1px solid var(--line);
       transition: transform 0.4s var(--ease), border-color 0.3s, opacity 0.9s var(--ease);
     }
-    .principle:hover { border-color: var(--navy); }
+    .principle:hover { border-color: var(--accent); }
     .js .principle.reveal.is-in:hover { transform: translateX(6px); }
-    .principle::before { content: '0' counter(p); font-family: var(--font-display); font-style: italic; font-size: 28px; color: var(--navy); line-height: 1.1; }
+    .principle::before { content: '0' counter(p); font-family: var(--font-display); font-style: italic; font-size: 28px; color: var(--accent); line-height: 1.1; }
     .principle h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 8px; }
     .principle p { font-size: 15px; color: var(--muted); line-height: 1.7; }
-    .hl-blue { background: var(--navy); color: #fff; padding: 1px 7px 2px; border-radius: 5px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .hl-blue { color: var(--ink); background: var(--accent); padding: 1px 7px 2px; border-radius: 5px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
     /* ── CONTACT ── */
     .contact { background: var(--ink); color: var(--paper); padding: var(--section-y) 0 0; overflow: hidden; }
@@ -558,7 +566,7 @@
     }
     .contact-links a:first-child { border-top: 1px solid rgba(246,243,238,0.14); }
     .contact-links a span { font-family: var(--font-mono); font-size: 18px; font-weight: 400; transition: transform 0.4s var(--ease); }
-    .contact-links a:hover { padding-left: 12px; color: var(--accent); }
+    .contact-links a:hover { padding-left: 12px; color: var(--accent-ink); }
     .contact-links a:hover span { transform: translate(4px, -4px); }
     .footer {
       margin-top: clamp(80px, 10vw, 140px);
@@ -580,19 +588,10 @@
     @keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 80%, 100% { transform: scale(2.6); opacity: 0; } }
     @keyframes drip { to { top: 110%; } }
     @keyframes marquee { to { transform: translateX(-50%); } }
-    @keyframes breathe { to { transform: translateY(-3px); } }
-    @keyframes tilt { from { transform: rotate(-2deg); } to { transform: rotate(2.5deg); } }
-    @keyframes wave {
-      0%, 55%, 100% { transform: rotate(0deg); }
-      8%  { transform: rotate(18deg); }
-      18% { transform: rotate(-10deg); }
-      28% { transform: rotate(18deg); }
-      38% { transform: rotate(-10deg); }
-      48% { transform: rotate(8deg); }
-    }
-    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+    @keyframes float { from { transform: translateY(0); } to { transform: translateY(-8px); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes pop { from { opacity: 0; transform: translateY(10px) scale(0.85); } to { opacity: 1; transform: none; } }
+    @keyframes boing { 0% { transform: scale(1); } 35% { transform: scale(0.93); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
     @keyframes bob { from { transform: translateY(0); } to { transform: translateY(-10px); } }
 
     /* ── RESPONSIVE ── */
@@ -620,8 +619,9 @@
 
       .hero { padding: 130px 0 72px; min-height: auto; }
       .hero-grid { grid-template-columns: 1fr; gap: 56px; }
-      .avatar-stage { width: min(62%, 260px); min-width: 0; margin-top: 64px; }
-      .bubble { right: auto; left: 50%; top: -60px; transform: translateX(-60%); font-size: 14px; padding: 11px 16px; border-radius: 22px 22px 22px 6px; }
+      .avatar-stage { width: min(78%, 320px); min-width: 0; margin-top: 64px; }
+      .bubble { right: auto; left: 50%; top: -84px; translate: -62% 0; font-size: 15px; padding: 10px 18px 11px; border-radius: 24px; }
+      .bubble .tail { right: auto; left: 58%; bottom: -15px; transform: rotate(62deg) scale(0.8); }
       .scroll-cue { display: none; }
       .about-grid, .approach-grid, .contact-grid { grid-template-columns: 1fr; }
       .about-sticky, .approach-sticky { position: static; }
@@ -652,8 +652,8 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .js .reveal { opacity: 1; transform: none; }
-      .hl { background-size: 100% 100%; color: #fff; }
-      .hl-logo img { filter: brightness(0) invert(1); }
+      .hl { background-size: 100% 100%; color: var(--ink); }
+      .hl-logo img { filter: brightness(0); }
     }
   </style>
 </head>
@@ -746,108 +746,15 @@
           </div>
         </div>
 
-        <!-- Avatar: colours are CSS variables on .avatar (skin, hair, tee, overshirt, jeans, shoes) -->
+        <!-- Avatar -->
+        <div class="av-parallax">
         <div class="avatar-stage fade-in d2">
-          <svg class="avatar" viewBox="20 8 230 496" role="img" aria-label="Illustrated avatar of Rohan waving hello">
-            <ellipse cx="120" cy="494" rx="66" ry="7" fill="rgba(20,18,16,0.10)"/>
-
-            <!-- jeans, rolled cuffs -->
-            <path d="M80 292 H160 L161 318 L150 470 H123 L120.6 342 H119.4 L117 470 H90 L79 318 Z" fill="var(--av-jeans)"/>
-            <path d="M108 332 L117 470 H111 Z" fill="var(--av-jeans-shade)"/>
-            <path d="M152 340 L150 470 H145 Z" fill="var(--av-jeans-shade)"/>
-            <path d="M120 300 V330" stroke="var(--av-jeans-shade)" stroke-width="1.6"/>
-            <path d="M89.6 458 H117.6 L117.3 470 H89.9 Z" fill="var(--av-jeans-cuff)"/>
-            <path d="M123.4 458 H150.8 L150.4 470 H123 Z" fill="var(--av-jeans-cuff)"/>
-
-            <!-- white sneakers -->
-            <path d="M91 468 H117 L118 486 H76 Q76 476 91 472 Z" fill="var(--av-shoe)"/>
-            <path d="M149 468 H123 L122 486 H164 Q164 476 149 472 Z" fill="var(--av-shoe)"/>
-            <path d="M75 485 H118.5 V489 Q118.5 493 114 493 H79 Q75 493 75 489 Z" fill="var(--av-sole)"/>
-            <path d="M165 485 H121.5 V489 Q121.5 493 126 493 H161 Q165 493 165 489 Z" fill="var(--av-sole)"/>
-            <path d="M78 482.5 H118" stroke="var(--av-accent)" stroke-width="2"/>
-            <path d="M162 482.5 H122" stroke="var(--av-accent)" stroke-width="2"/>
-            <path d="M100 471 L112 471 M101 475 L112 475" stroke="var(--av-sole)" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M140 471 L128 471 M139 475 L128 475" stroke="var(--av-sole)" stroke-width="1.6" stroke-linecap="round"/>
-
-            <g class="av-upper">
-              <!-- neck -->
-              <rect x="110" y="122" width="20" height="34" rx="8" fill="var(--av-skin)"/>
-              <path d="M110 136 Q120 144 130 136 V128 H110 Z" fill="var(--av-skin-shade)" opacity="0.7"/>
-
-              <!-- white tee -->
-              <path d="M102 148 H138 L136 304 H104 Z" fill="var(--av-tee)"/>
-              <path d="M108 149 Q120 161 132 149" stroke="var(--av-tee-shade)" stroke-width="3" fill="none" stroke-linecap="round"/>
-
-              <!-- open overshirt, untucked -->
-              <path d="M78 164 Q84 151 104 147 L112 166 L113 302 L76 298 Z" fill="var(--av-over)"/>
-              <path d="M162 164 Q156 151 136 147 L128 166 L127 302 L164 298 Z" fill="var(--av-over)"/>
-              <path d="M77 190 Q76 250 76 298 L84 299 Q83 250 84 196 Z" fill="var(--av-over-shade)" opacity="0.6"/>
-              <path d="M163 178 Q164 250 164 298 L156 299 Q157 250 156 182 Z" fill="var(--av-over-shade)" opacity="0.6"/>
-              <path d="M112 168 L113 301 M128 168 L127 301" stroke="var(--av-over-shade)" stroke-width="1.6" fill="none"/>
-              <path d="M92 196 H107 V212 Q107 215 104 215 H95 Q92 215 92 212 Z" fill="none" stroke="var(--av-over-shade)" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M92 201 H107" stroke="var(--av-over-shade)" stroke-width="1.6"/>
-              <!-- collar -->
-              <path d="M104 146 L93 153 L108 178 L111 162 Z" fill="var(--av-over)" stroke="var(--av-over-shade)" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M136 146 L147 153 L132 178 L129 162 Z" fill="var(--av-over)" stroke="var(--av-over-shade)" stroke-width="1.6" stroke-linejoin="round"/>
-
-              <!-- relaxed arm -->
-              <path d="M86 168 Q74 206 73 246" stroke="var(--av-over)" stroke-width="25" stroke-linecap="round" fill="none"/>
-              <path d="M73 242 L72.8 254" stroke="var(--av-over-shade)" stroke-width="26"/>
-              <path d="M72.8 254 Q72.5 276 74 292" stroke="var(--av-skin)" stroke-width="16" stroke-linecap="round" fill="none"/>
-              <path d="M66 294 Q66 286 74 286 Q83 286 83 296 Q83 309 75 310 Q66 309 66 300 Z" fill="var(--av-skin)"/>
-              <path d="M81 291 Q85 296 82 302" stroke="var(--av-skin-shade)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-
-              <!-- waving arm -->
-              <path d="M154 170 L190 150" stroke="var(--av-over)" stroke-width="25" stroke-linecap="round"/>
-              <g class="av-forearm">
-                <path d="M191.2 152 L193.4 137" stroke="var(--av-over-shade)" stroke-width="26"/>
-                <path d="M193.4 139 L199 98" stroke="var(--av-skin)" stroke-width="15" stroke-linecap="round"/>
-                <path d="M197.6 108.5 L198.6 101.5" stroke="var(--av-watch)" stroke-width="16.5"/>
-                <circle cx="198.1" cy="105" r="4.2" fill="#efebe4" stroke="var(--av-watch)" stroke-width="1.5"/>
-                <g fill="none" stroke-linecap="round">
-                  <g stroke="var(--av-skin-shade)" stroke-width="8.6">
-                    <path d="M194 74 L191 61"/><path d="M199.5 71 L199 56"/><path d="M205 71 L207 57"/><path d="M210 75 L214 64"/><path d="M190 88 L181 81"/>
-                  </g>
-                  <g stroke="var(--av-skin)" stroke-width="6.8">
-                    <path d="M194 74 L191 61"/><path d="M199.5 71 L199 56"/><path d="M205 71 L207 57"/><path d="M210 75 L214 64"/><path d="M190 88 L181 81"/>
-                  </g>
-                </g>
-                <path d="M188 82 Q188 70 201 70 Q214 70 214 82 Q213 96 201 97 Q189 96 188 82 Z" fill="var(--av-skin)"/>
-              </g>
-
-              <!-- head -->
-              <g class="av-head">
-                <ellipse cx="88.5" cy="100" rx="7" ry="10" fill="var(--av-skin)"/>
-                <ellipse cx="151.5" cy="100" rx="7" ry="10" fill="var(--av-skin)"/>
-                <path d="M87 100 Q86 96 89 94" stroke="var(--av-skin-shade)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M153 100 Q154 96 151 94" stroke="var(--av-skin-shade)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M89 90 Q89 54 120 54 Q151 54 151 90 L150 104 Q147 127 130 134 Q120 138 110 134 Q93 127 90 104 Z" fill="var(--av-skin)"/>
-
-                <!-- hair: one shape that sits on the head, with a side-swept quiff -->
-                <path d="M87 94 C85 70 88 52 102 45 C114 39 132 39 144 44 C155 50 156 72 153 94 H150.5 C150 84 148 78 145 73 C139 66 130 62 120 62 C110 62 101 64 96 70 C92 76 90.5 84 90.5 94 Z" fill="var(--av-hair)"/>
-                <path d="M95 62 C97 45 111 35 129 34 C143 33 153 40 154.5 51 C148 48 141 47 132 48 C118 49 105 55 95 64 Z" fill="var(--av-hair)"/>
-                <path d="M116 63 C123 55 136 53 147 58 C140 60 134 64 131 71 C127 66 122 63 116 63 Z" fill="var(--av-hair)"/>
-                <path d="M110 41 C122 36 137 36 147 42" stroke="var(--av-hair-hi)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-                <path d="M104 52 C114 46 126 45 136 46" stroke="var(--av-hair-hi)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
-
-                <path d="M99 85 Q106 81 113 84" stroke="var(--av-hair)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-                <path d="M127 84 Q134 81 141 85" stroke="var(--av-hair)" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-                <g class="av-eyes">
-                  <g class="av-pupils">
-                    <ellipse cx="106" cy="96" rx="3.3" ry="3.9" fill="#231a15"/>
-                    <ellipse cx="134" cy="96" rx="3.3" ry="3.9" fill="#231a15"/>
-                    <circle cx="107.2" cy="94.6" r="1.1" fill="#fff"/><circle cx="135.2" cy="94.6" r="1.1" fill="#fff"/>
-                  </g>
-                </g>
-                <circle cx="100" cy="110" r="5.5" fill="var(--av-blush)" opacity="0.28"/>
-                <circle cx="140" cy="110" r="5.5" fill="var(--av-blush)" opacity="0.28"/>
-                <path d="M120 99 Q116.5 108 119 111 Q121 112.5 124 110.5" stroke="var(--av-skin-shade)" stroke-width="2" fill="none" stroke-linecap="round"/>
-                <path d="M109 118 Q120 131 131 118 Q120 122 109 118 Z" fill="#7a3427"/>
-                <path d="M111.5 119.2 Q120 122.4 128.5 119.2 L127.8 121 Q120 123.8 112.2 121 Z" fill="#fff"/>
-              </g>
-            </g>
-          </svg>
-          <div class="bubble" aria-hidden="true"><span>Hi there! 👋</span></div>
+          <picture class="avatar-float">
+            <source srcset="assets/avatar/rohan-half.webp" type="image/webp"/>
+            <img class="avatar" src="assets/avatar/rohan-half.png" width="810" height="1380" fetchpriority="high" alt="Rohan Harishchandrakar smiling, in an olive overshirt, white tee and jeans"/>
+          </picture>
+          <div class="bubble" aria-hidden="true"><span>Hi there! 👋</span><svg class="tail" viewBox="0 0 46 40" aria-hidden="true"><path d="M3 2 C 18 10, 30 19, 43 36 C 27 32, 15 30, 3 28"/></svg></div>
+        </div>
         </div>
       </div>
     </div>
@@ -1280,22 +1187,7 @@
     // Hero highlights sweep in once the intro has settled
     setTimeout(() => document.querySelector('.hero').classList.add('is-in'), reduceMotion ? 0 : 900);
 
-    // Avatar: eyes follow the cursor; speech bubble cycles (click to skip ahead)
-    const pupils = document.querySelector('.av-pupils');
-    const avatar = document.querySelector('.avatar');
-    if (pupils && !reduceMotion && matchMedia('(pointer: fine)').matches) {
-      let raf = 0;
-      addEventListener('pointermove', e => {
-        cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-          const r = avatar.getBoundingClientRect();
-          const cx = r.left + r.width * 0.42, cy = r.top + r.height * 0.19;
-          const dx = e.clientX - cx, dy = e.clientY - cy, d = Math.hypot(dx, dy) || 1;
-          const k = Math.min(d / 300, 1) * 2.2;
-          pupils.style.transform = `translate(${(dx / d * k).toFixed(2)}px, ${(dy / d * k).toFixed(2)}px)`;
-        });
-      }, { passive: true });
-    }
+    // Avatar speech bubble cycles (click to skip ahead)
     const bubble = document.querySelector('.bubble');
     if (bubble) {
       const lines = ['Hi there! 👋', "I'm Rohan.", 'I turn data into decisions.', 'Scroll to see my work ↓'];
@@ -1304,7 +1196,10 @@
       const next = () => {
         n = (n + 1) % lines.length;
         text.classList.add('swap');
-        setTimeout(() => { text.textContent = lines[n]; text.classList.remove('swap'); }, 250);
+        setTimeout(() => {
+          text.textContent = lines[n]; text.classList.remove('swap');
+          bubble.classList.remove('boing'); void bubble.offsetWidth; bubble.classList.add('boing');
+        }, 200);
       };
       const loop = () => { clearInterval(bubbleTimer); if (!reduceMotion) bubbleTimer = setInterval(next, 3400); };
       bubble.addEventListener('click', () => { next(); loop(); });
@@ -1448,6 +1343,61 @@
       setTimeout(() => (b.textContent = 'Copy'), 1800);
     }));
   })();
+  </script>
+
+  <!-- Motion (scroll and hover effects). Optional: the page works without it. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/motion@14.11.1/dist/motion.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const finePointer = matchMedia('(pointer: fine)').matches;
+
+    // ── Motion ──
+    if (window.Motion) {
+      const { animate, scroll } = Motion;
+      const hero = document.querySelector('.hero');
+
+      // 1. Hero depth: the name and the avatar drift at different speeds as you scroll away
+      if (hero && innerWidth > 900) {
+        const name = document.querySelector('.hero-name');
+        const avatar = document.querySelector('.av-parallax');
+        if (name) scroll(animate(name, { y: [0, -70] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
+        if (avatar) scroll(animate(avatar, { y: [0, 90] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
+      }
+
+      // 2. Work ribbon: speeds up while you scroll, then eases back to its normal pace
+      const track = document.querySelector('.marquee-track');
+      const ribbon = track && track.getAnimations()[0];
+      if (ribbon) {
+        let boost = 0;
+        scroll((_, info) => { boost = Math.max(boost, Math.min(Math.abs(info.y.velocity) / 450, 5)); });
+        const settle = () => {
+          boost *= 0.92;
+          ribbon.playbackRate = 1 + boost;
+          requestAnimationFrame(settle);
+        };
+        requestAnimationFrame(settle);
+      }
+
+      // 3. Project cards: lift and tilt slightly toward the cursor
+      if (finePointer && innerWidth > 1100) {
+        const spring = { type: 'spring', stiffness: 220, damping: 22 };
+        document.querySelectorAll('.project').forEach(card => {
+          card.addEventListener('pointerenter', () => { if (card.classList.contains('is-in')) card.classList.add('tilting'); });
+          card.addEventListener('pointermove', e => {
+            if (!card.classList.contains('tilting')) return;
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+            animate(card, { rotateY: x * 3, rotateX: -y * 3, y: -6, transformPerspective: 1400 }, spring);
+          });
+          card.addEventListener('pointerleave', () => {
+            if (!card.classList.contains('tilting')) return;
+            animate(card, { rotateY: 0, rotateX: 0, y: 0 }, spring).then(() => { card.classList.remove('tilting'); card.style.transform = ''; });
+          });
+        });
+      }
+    }
+  });
   </script>
 </body>
 </html>
